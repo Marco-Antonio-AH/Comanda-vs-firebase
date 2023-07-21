@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prueba_1.Registrarse"
+             Title="Registrarse">
+
+
+    <VerticalStackLayout Spacing="20">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="25*"/>
+            </Grid.ColumnDefinitions>
+            <Entry Grid.Column="1" 
+         x:Name="registroNombre" 
+         FontSize="20" 
+         HorizontalOptions="FillAndExpand" 
+         Placeholder = "Nombre" 
+         MaxLength="20"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="25*"/>
+            </Grid.ColumnDefinitions>
+            <Entry Grid.Column="1" 
+         
+         x:Name="registroContraseña" 
+         FontSize="20" 
+         HorizontalOptions="FillAndExpand" 
+         Placeholder = "Contraseña" 
+         IsPassword="true"
+         ClearButtonVisibility="WhileEditing"
+         MaxLength="20"/>
+        </Grid>
+
+
+        <Button
+            x:Name="BtnRegistrar"
+            Clicked="registrarUsuario"
+            Text="Registrar usuario"
+            SemanticProperties.Hint="Registrar usuario"
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
